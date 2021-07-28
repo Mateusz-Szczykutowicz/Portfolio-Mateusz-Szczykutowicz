@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +7,445 @@
 }
 
 body {
-    background-color: #333;
+    overflow-x: hidden;
+    width: 100vw;
+    background-color: white;
     font-size: 16px;
-}
+    font-family: "Roboto", sans-serif;
 
-.container {
-    p {
-        color: red;
-        text-align: center;
-        margin-top: 50vh;
-        font-size: 48px;
+    .container {
+        width: 360px;
+        header {
+            display: flex;
+            color: white;
+            background-color: $violet;
+            padding-top: 50px;
+            justify-content: center;
+
+            nav {
+                max-height: 20%;
+                position: relative;
+                z-index: 2;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+                margin-left: -30px;
+                margin-right: -10px;
+
+                ul {
+                    li {
+                        transform: rotate(270deg);
+                        height: 40px;
+                        // background-color: brown;
+                        margin-bottom: 100px;
+                        list-style: none;
+                        text-transform: uppercase;
+
+                        a {
+                            display: block;
+                            color: white;
+                            text-decoration: none;
+                            letter-spacing: 2px;
+
+                            span {
+                                display: block;
+                                margin-top: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+            .content {
+                position: relative;
+                z-index: 1;
+                max-width: 70%;
+                text-align: center;
+
+                h1 {
+                    color: $aqua;
+                    font-size: 18px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-bottom: 10px;
+
+                    span {
+                        display: block;
+                        color: white;
+                        font-size: 12px;
+                        font-weight: normal;
+                        letter-spacing: 0;
+                    }
+                }
+                h2 {
+                    text-transform: uppercase;
+                    font-size: 37px;
+                    letter-spacing: 5px;
+                    color: $aqua;
+
+                    .first {
+                        display: block;
+                        text-transform: lowercase;
+                        font-size: 68px;
+                        letter-spacing: 6px;
+                        line-height: 66px;
+                    }
+                    .second {
+                        display: block;
+                        text-transform: lowercase;
+                        font-size: 15px;
+                        color: $pink;
+                        letter-spacing: 3px;
+                        margin-top: 10px;
+                    }
+                    .ff {
+                        letter-spacing: -1px;
+                        margin-right: 4px;
+                    }
+                }
+                .img-container {
+                    width: 100%;
+                    img {
+                        margin-top: 20px;
+                        margin-left: -160px;
+                    }
+                }
+            }
+        }
+        .about-me {
+            display: flex;
+
+            .headers {
+                min-width: 100px;
+                width: 100px;
+                background-color: $violet;
+                color: $pink;
+
+                .header {
+                    position: relative;
+                    margin-top: 50px;
+                    margin-left: -15px;
+                    transform: rotate(270deg);
+                    display: inline-block;
+                    // background-color: burlywood;
+                    text-align: right;
+                    h1 {
+                        font-size: 19px;
+                        letter-spacing: 5px;
+                        margin-bottom: 5px;
+                    }
+                    h2 {
+                        font-size: 10px;
+                        letter-spacing: 2px;
+                    }
+                }
+                img {
+                    display: block;
+                    margin-top: 35px;
+                    margin-left: 20px;
+                }
+            }
+            .content {
+                // max-width: 260px;
+                margin-top: 30px;
+                margin-bottom: 75px;
+                .avatar {
+                    transform: translate(-25px);
+                    width: 170px;
+                    height: 220px;
+                    padding: 10px;
+                    background-color: white;
+                    border-radius: 37px;
+
+                    margin-bottom: 10px;
+
+                    img {
+                        text-align: center;
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #333;
+                        color: white;
+                        border-radius: 37px;
+                        object-fit: cover;
+                    }
+                }
+                .text {
+                    padding-left: 20px;
+                    padding-right: 10px;
+
+                    p {
+                        font-size: 12px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .skills {
+            // background-color: aquamarine;
+            display: flex;
+            .headers {
+                position: relative;
+                min-width: 100px;
+                width: 100px;
+                background-color: $violet;
+                color: $pink;
+
+                .header {
+                    margin-top: 50px;
+                    margin-left: -60px;
+                    transform: rotate(270deg);
+                    display: inline-block;
+                    // background-color: burlywood;
+                    text-align: right;
+                    h1 {
+                        font-size: 19px;
+                        letter-spacing: 5px;
+                        margin-bottom: 5px;
+                    }
+                    h2 {
+                        font-size: 10px;
+                        letter-spacing: 2px;
+                    }
+                }
+                img {
+                    display: block;
+                    margin-top: 85px;
+                    margin-left: 20px;
+                }
+                .types {
+                    position: absolute;
+                    color: white;
+                    top: 60px;
+                    right: 0;
+                    // background-color: chocolate;
+                    width: 75px;
+                    text-align: center;
+
+                    p {
+                        width: 120px;
+                        height: 20px;
+                        // background-color: crimson;
+                        transform: rotate(270deg);
+                        margin-bottom: 180px;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .content {
+                .skills {
+                    margin-bottom: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    .skill {
+                        display: flex;
+                        margin-bottom: 10px;
+                        img {
+                            height: 20px;
+                            // background-color: crimson;
+                            min-width: 20px;
+                            width: 60px;
+                            margin-left: 25px;
+                            margin-right: 15px;
+                            object-fit: contain;
+                        }
+                        p {
+                            font-size: 14px;
+                            font-weight: bold;
+                            letter-spacing: 3px;
+                        }
+                    }
+                }
+            }
+        }
+        .projects {
+            display: flex;
+            .headers {
+                min-width: 100px;
+                width: 100px;
+                background-color: $violet;
+                color: $pink;
+
+                .header {
+                    position: relative;
+                    margin-top: 50px;
+                    margin-left: -30px;
+                    transform: rotate(270deg);
+                    display: inline-block;
+                    // background-color: burlywood;
+                    text-align: right;
+                    h1 {
+                        font-size: 19px;
+                        letter-spacing: 5px;
+                        margin-bottom: 5px;
+                    }
+                    h2 {
+                        font-size: 10px;
+                        letter-spacing: 2px;
+                    }
+                }
+                img {
+                    display: block;
+                    margin-top: 55px;
+                    margin-left: 20px;
+                }
+            }
+            .project {
+                position: relative;
+                // background-color: burlywood;
+                padding: 0 20px;
+                margin-top: 25px;
+                margin-bottom: 40px;
+                .image {
+                    margin-left: -50px;
+                    margin-bottom: 25px;
+                    width: 260px;
+                    height: 180px;
+                    border-radius: 50px;
+                    text-align: center;
+                    background-color: white;
+                    overflow: hidden;
+                    padding: 10px;
+                    img {
+                        min-width: 100%;
+                        min-height: 100%;
+                        background-color: #333;
+                        color: white;
+                        border-radius: 50px;
+                        object-fit: cover;
+                    }
+                }
+                h3 {
+                    color: $pink;
+                    font-size: 17px;
+                    font-weight: bold;
+                    letter-spacing: 5px;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                }
+                .tags {
+                    p {
+                        display: inline-block;
+                        font-size: 11px;
+                        font-weight: normal;
+                        margin-right: 5px;
+                        margin-bottom: 10px;
+                        color: $pink;
+                    }
+                }
+                p {
+                    font-size: 11px;
+                    color: black;
+                    font-weight: normal;
+                }
+                .media {
+                    position: absolute;
+                    top: 200px;
+                    left: -60px;
+                    img {
+                        display: block;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+        footer {
+            background-color: $violet;
+            .contact {
+                padding-top: 20px;
+                display: flex;
+                padding-right: 35px;
+                .headers {
+                    min-width: 100px;
+                    width: 100px;
+                    background-color: $violet;
+                    color: $pink;
+
+                    .header {
+                        position: relative;
+                        margin-top: 50px;
+                        margin-left: -25px;
+                        transform: rotate(270deg);
+                        display: inline-block;
+                        // background-color: burlywood;
+                        text-align: right;
+                        h1 {
+                            font-size: 19px;
+                            letter-spacing: 5px;
+                            margin-bottom: 5px;
+                        }
+                        h2 {
+                            font-size: 10px;
+                            letter-spacing: 2px;
+                        }
+                    }
+                    img {
+                        display: block;
+                        margin-top: 55px;
+                        margin-left: 20px;
+                    }
+                }
+                .content {
+                    margin-top: 40px;
+                    margin-bottom: 50px;
+                    // background-color: bisque;
+                    width: 100%;
+                    text-align: right;
+                    .media {
+                        margin-left: 25px;
+                        display: flex;
+                        justify-content: space-between;
+                        // background-color: aquamarine;
+                        margin-bottom: 25px;
+                        img {
+                            display: block;
+                            width: 28px;
+                            height: 28px;
+                            // background-color: brown;
+                            object-fit: cover;
+                        }
+                    }
+                    p {
+                        color: $pink;
+                        font-size: 15px;
+                        font-weight: bold;
+                        margin-bottom: 3px;
+                        letter-spacing: 3px;
+                        a {
+                            color: $pink;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            .rwd {
+                padding: 0 20px;
+                text-align: right;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 2px;
+                .first {
+                    color: white;
+                    margin-bottom: 25px;
+                }
+                .second {
+                    color: $aqua;
+                    margin-bottom: 40px;
+                }
+            }
+            .image {
+                overflow: hidden;
+                margin-top: -75px;
+                img {
+                    display: block;
+                    width: 200%;
+                    transform: translate(-45%);
+                    // background-color: royalblue;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 }
